@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" type="text/javascript" defer></script>
+</head>
+<body onload="refreshPaths(),handleMissingConnectors(),handleHeadTail(),allNodesDragable()" onresize="refreshPaths()">
+    
+    <section class="UI" id ="UI">
+        <ul class="control-btns">
+            <li  onclick="addNode('tail','end')">Add at end</li>
+            <li  onclick="addNode('head','front')">Add at front</li>
+        </ul>
+    </section>
+
+    <section id ="pops" class="pops">
+        
+    </section>
+
+    <section class="nodes">
+        <ul class="single-linked-list" id='single-linked-list'>
+            
+            <li class="node-base head" id="head">
+                <div class="data">Data<p>A</p></div>
+                <div class="next">Next<p>B</p></div>
+            </li>
+
+            <li class="node-base">
+                <div class="data">Data<p>B</p></div>
+                <div class="next">Next<p>C</p></div>
+            </li>
+            <li class="node-base tail" id="tail">
+                <div class="data">Data<p>C</p></div>
+                <div class="next">Next<p>&nbsp;</p></div>
+            </li>
+            
+        </ul>
+    </section>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <svg width="600px" height="100px">
+        <defs>
+            <marker id="arrow" markerWidth="50" markerHeight="50" refX="9.5" refY="3" orient="auto" markerUnits="userSpaceOnUse" viewBox="0 0 15 15">
+            <path d="M0,2 L0,4 L6,3 z" fill="#000" shape-rendering = geometricPrecision/>
+            </marker>
+        </defs>
+    </svg>
+    
+
+</body>
+</html>
+

@@ -1,0 +1,162 @@
+
+body{
+    margin: 0;
+    background-color: #ececec;
+    font-family: "poppins";
+}
+
+ul{
+    list-style-type: none;
+}
+
+.single-linked-list {
+    margin: 6em 0;
+    padding: 6em 0;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    height: 170px;
+    background-color: rgb(249, 249, 249);
+}
+
+.node-base,
+.drag-abs{
+    background-color: goldenrod;
+    /* width: 100px;
+    height: 50px; */
+    width: 120px;
+    height: 70px;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 30px;
+    border-radius: 10%;
+    display: flex;
+    z-index: 2;
+    
+}
+.node-base p{
+    margin: auto;
+    text-align: center;
+    font-weight: normal;
+}
+.head{
+    background-color: aqua;
+
+    margin-top: 60px;
+    margin-right: 0;
+    margin-left: auto;
+    z-index:2;
+}
+
+.tail{
+    background-color: crimson;
+
+    margin-top: 60px;
+    
+    margin-right: auto;
+    z-index:2;
+}
+
+.connector{
+    /* height: 100%; */
+    width: 10em;
+    /* border: 1px solid black; */
+    /* position: absolute;
+    top:0; */
+}
+
+svg{
+    fill:transparent;
+    stroke:#000;
+    stroke-miterlimit:10;
+    stroke-width:3px;
+    overflow: visible;
+
+    border: 0px solid black;
+
+    margin: 0;
+    padding: 0;
+    
+    z-index: 1;
+}
+
+.data{
+    margin:auto;
+    font-weight: 600;
+}
+
+.next{
+    margin:auto;
+    font-weight: 600;
+}
+
+.control-btns{
+    margin: 4em 0;
+    padding: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.drag-abs{
+    position: absolute;
+    margin: 0;
+    z-index: 0;
+}
+.drag-abs p{
+    margin: auto;
+    text-align: center;
+    font-weight: normal;
+}
+
+.nodes{
+    position: relative;
+    padding: 2em 0;
+}
+
+.box{
+    /* border: 1px solid red; */
+    z-index: 1;
+    position: absolute;
+
+}
+.control-btns li{
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid rgb(150, 150, 150);
+    padding: .5em;
+}
+
+.trans{
+    transition: all 0.5s;
+}
+@keyframes flash {
+    0%   {opacity: 0;}
+    25%  {opacity: 1; top: 40px;}
+    85%  {opacity: 1; top: 40px;}
+    100% {opacity: 0; top: 200px; display:none;}
+}
+
+.popup{
+    opacity: 0;
+    animation-name: flash;
+    animation-duration: 2s; 
+
+    text-align: center;
+    border: 1px solid red;
+    
+    /* transition: all 2s; */
+
+    position: absolute; 
+    left: 0; 
+    right: 0;
+    top:0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50vw;
+
+}
+.pops{
+    height: 1rem;
+    position: relative;
+}
